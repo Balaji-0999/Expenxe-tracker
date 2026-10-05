@@ -1,4 +1,4 @@
-name: Self-Hosted-Runner
+name: Self-Hosted-Runner.
 
 on:
   workflow_dispatch:
