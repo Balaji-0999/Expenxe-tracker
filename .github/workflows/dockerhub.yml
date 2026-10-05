@@ -20,8 +20,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
-          context: ./backend             # Backend folder ki location
-          file: ./backend/Dockerfile     # Backend Dockerfile ka path
+          context: docker-compose.yml
           push: true
           tags: |
              ${{ vars.DOCKERHUB_USERNAME }}/github-action-app:${{ github.ref_name }}
