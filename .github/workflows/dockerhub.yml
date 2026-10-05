@@ -21,6 +21,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
+          context: ./frontend            # Frontend folder ki location
+          file: ./frontend/Dockerfile    # Frontend Dockerfile ka pat
           push: true
           tags: |
              ${{ vars.DOCKERHUB_USERNAME }}/github-action-app:${{ github.ref_name }}
