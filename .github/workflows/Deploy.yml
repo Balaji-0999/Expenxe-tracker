@@ -2,14 +2,16 @@ name: Self-Hosted-Runner
 
 on:
   workflow_dispatch:
+  
 
 
 jobs:
-  env:
-    DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
     
   Deploy:
     runs-on: self-hosted
+    env:
+      DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+      
     steps:
      - name: Code Checkout
        uses: actions/checkout@v4
