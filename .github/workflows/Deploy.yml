@@ -1,0 +1,15 @@
+name: Self-Hosted-Runner
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  Deploy:
+    runs-on: self-hosted
+    steps:
+     - name: Code Checkout
+       uses: actions/checkout@v4
+
+     - name: Deploy with Docker-compose
+       run: docker compose up -d --build
