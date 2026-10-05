@@ -20,7 +20,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
-          context: docker-compose.yml
+          context: .
           push: true
           tags: |
              ${{ vars.DOCKERHUB_USERNAME }}/github-action-app:${{ github.ref_name }}
